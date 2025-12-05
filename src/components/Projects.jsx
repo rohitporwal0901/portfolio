@@ -30,29 +30,29 @@ const Projects = () => {
                 "Monetization options for organizers"
             ]
         },
-        {
-            id: "2",
-            title: "Durud",
-            description: "Smart warehouse management system designed to streamline book distribution for schools.",
-            longDescription: "A specialized warehouse management system that automates and optimizes the storage, tracking, and delivery of educational books to schools. It enables real-time inventory visibility, efficient order processing, and accurate dispatching to ensure schools receive the right books on time, every time.",
-            technologies: ["Angular", "Angular Material", "TypeScript", "Firebase", "AnalogJS", "RxJS"],
-            features: [
-                "Real-time inventory tracking by title, edition, language, and grade level",
-                "Order management with school profiles and scheduled deliveries",
-                "Batch picking and packing optimizations",
-                "Route planning and logistics integration",
-                "Barcode / RFID enabled scanning",
-                "Analytics and reporting dashboards"
-            ],
-            adminUrl: "https://durud-e7449.web.app/",
-            status: "completed",
-            category: ["web"],
-            highlights: [
-                "Accuracy > 99% in order fulfilment",
-                "Delivery times reduced by 30%",
-                "Support for over 100 schools"
-            ]
-        },
+        // {
+        //     id: "2",
+        //     title: "Durud",
+        //     description: "Smart warehouse management system designed to streamline book distribution for schools.",
+        //     longDescription: "A specialized warehouse management system that automates and optimizes the storage, tracking, and delivery of educational books to schools. It enables real-time inventory visibility, efficient order processing, and accurate dispatching to ensure schools receive the right books on time, every time.",
+        //     technologies: ["Angular", "Angular Material", "TypeScript", "Firebase", "AnalogJS", "RxJS"],
+        //     features: [
+        //         "Real-time inventory tracking by title, edition, language, and grade level",
+        //         "Order management with school profiles and scheduled deliveries",
+        //         "Batch picking and packing optimizations",
+        //         "Route planning and logistics integration",
+        //         "Barcode / RFID enabled scanning",
+        //         "Analytics and reporting dashboards"
+        //     ],
+        //     adminUrl: "https://durud-e7449.web.app/",
+        //     status: "completed",
+        //     category: ["web"],
+        //     highlights: [
+        //         "Accuracy > 99% in order fulfilment",
+        //         "Delivery times reduced by 30%",
+        //         "Support for over 100 schools"
+        //     ]
+        // },
         {
             id: "3",
             title: "Bhautiki Plus",
@@ -101,29 +101,29 @@ const Projects = () => {
                 "Bridges gap between strategy and execution"
             ]
         },
-        {
-            id: "5",
-            title: "Qasper",
-            description: "AI-powered survey and reporting platform for structured data collection and insights.",
-            longDescription: "Qasper is a smart survey and reporting solution that enables users to design and schedule surveys with customizable metrics and inputs. Data can be collected on a daily, monthly, quarterly, or yearly basis. The platform automatically generates structured reports in PDF and Excel formats, enhanced with GenAI-driven insights and recommendations for better decision-making.",
-            technologies: ["Angular", "AnalogJS", "Firebase", "RxJS", "NgRx", "TypeScript", "Angular Material", "GenAI"],
-            features: [
-                "Customizable survey forms with metrics and inputs",
-                "Flexible scheduling (daily, monthly, quarterly, yearly)",
-                "Automated PDF and Excel report generation",
-                "AI-powered report insights and recommendations",
-                "Data visualization and trend analysis"
-            ],
-            adminUrl: "https://qasper-live.web.app/",
-            userUrl: "https://qasper-live.web.app/",
-            status: "completed",
-            category: ["web"],
-            highlights: [
-                "Survey scheduling with recurring intervals",
-                "Exportable PDF and Excel reports",
-                "AI-driven insights for decision-making"
-            ]
-        },
+        // {
+        //     id: "5",
+        //     title: "Qasper",
+        //     description: "AI-powered survey and reporting platform for structured data collection and insights.",
+        //     longDescription: "Qasper is a smart survey and reporting solution that enables users to design and schedule surveys with customizable metrics and inputs. Data can be collected on a daily, monthly, quarterly, or yearly basis. The platform automatically generates structured reports in PDF and Excel formats, enhanced with GenAI-driven insights and recommendations for better decision-making.",
+        //     technologies: ["Angular", "AnalogJS", "Firebase", "RxJS", "NgRx", "TypeScript", "Angular Material", "GenAI"],
+        //     features: [
+        //         "Customizable survey forms with metrics and inputs",
+        //         "Flexible scheduling (daily, monthly, quarterly, yearly)",
+        //         "Automated PDF and Excel report generation",
+        //         "AI-powered report insights and recommendations",
+        //         "Data visualization and trend analysis"
+        //     ],
+        //     adminUrl: "https://qasper-live.web.app/",
+        //     userUrl: "https://qasper-live.web.app/",
+        //     status: "completed",
+        //     category: ["web"],
+        //     highlights: [
+        //         "Survey scheduling with recurring intervals",
+        //         "Exportable PDF and Excel reports",
+        //         "AI-driven insights for decision-making"
+        //     ]
+        // },
         {
             id: "6",
             title: "Active Avenue",
@@ -401,11 +401,11 @@ const Projects = () => {
                                         Visit Website
                                     </a>
                                 )}
-                                {selectedProject.adminUrl && (
+                                {/* {selectedProject.adminUrl && (
                                     <a href={selectedProject.adminUrl} target="_blank" rel="noopener noreferrer" className="btn">
                                         Admin Panel
                                     </a>
-                                )}
+                                )} */}
                                 {selectedProject.playStoreUrl && (
                                     <a href={selectedProject.playStoreUrl} target="_blank" rel="noopener noreferrer" className="btn">
                                         Play Store
