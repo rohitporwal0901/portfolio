@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Experience = () => {
     const experiences = [
@@ -28,11 +29,24 @@ const Experience = () => {
 
     return (
         <section id="experience" className="experience">
-            <div className="container">
+            <motion.div
+                className="container"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+            >
                 <h2>Experience</h2>
                 <div className="timeline">
                     {experiences.map((exp, index) => (
-                        <div key={index} className="timeline-item">
+                        <motion.div
+                            key={index}
+                            className="timeline-item"
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: index * 0.2 }}
+                        >
                             <div className="timeline-dot"></div>
                             <div className="timeline-content">
                                 <div className="timeline-header">
@@ -46,10 +60,10 @@ const Experience = () => {
                                     ))}
                                 </ul>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
-            </div>
+            </motion.div>
         </section>
     );
 };

@@ -1,9 +1,16 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Contact = () => {
     return (
         <section id="contact" className="contact">
-            <div className="container">
+            <motion.div
+                className="container"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+            >
                 <h2>Get In Touch</h2>
                 <div className="contact-content">
                     <p>
@@ -34,7 +41,7 @@ const Contact = () => {
                 <footer className="footer">
                     <p>&copy; {new Date().getFullYear()} Rohit Porwal. All rights reserved.</p>
                 </footer>
-            </div>
+            </motion.div>
         </section>
     );
 };

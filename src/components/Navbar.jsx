@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
@@ -13,7 +14,12 @@ const Navbar = () => {
     }, []);
 
     return (
-        <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+        <motion.nav
+            className={`navbar ${scrolled ? 'scrolled' : ''}`}
+            initial={{ y: -100 }}
+            animate={{ y: 0 }}
+            transition={{ duration: 0.5 }}
+        >
             <div className="container navbar-content">
                 <a href="#" className="logo">Rohit<span>.</span></a>
 
@@ -24,14 +30,44 @@ const Navbar = () => {
                 </div>
 
                 <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
-                    <li><a href="#home" onClick={() => setMenuOpen(false)}>Home</a></li>
-                    <li><a href="#about" onClick={() => setMenuOpen(false)}>About</a></li>
-                    <li><a href="#experience" onClick={() => setMenuOpen(false)}>Experience</a></li>
-                    <li><a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a></li>
-                    <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a></li>
+                    <motion.li
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.1 }}
+                    >
+                        <a href="#home" onClick={() => setMenuOpen(false)}>Home</a>
+                    </motion.li>
+                    <motion.li
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.2 }}
+                    >
+                        <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
+                    </motion.li>
+                    <motion.li
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.3 }}
+                    >
+                        <a href="#experience" onClick={() => setMenuOpen(false)}>Experience</a>
+                    </motion.li>
+                    <motion.li
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.4 }}
+                    >
+                        <a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a>
+                    </motion.li>
+                    <motion.li
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.5 }}
+                    >
+                        <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+                    </motion.li>
                 </ul>
             </div>
-        </nav>
+        </motion.nav>
     );
 };
 

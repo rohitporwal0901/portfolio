@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Projects = () => {
     const projects = [
@@ -26,24 +27,37 @@ const Projects = () => {
 
     return (
         <section id="projects" className="projects">
-            <div className="container">
+            <motion.div
+                className="container"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+            >
                 <h2>Projects</h2>
                 <div className="projects-grid">
                     {projects.map((project, index) => (
-                        <div key={index} className="project-card">
+                        <motion.div
+                            key={index}
+                            className="project-card"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                        >
                             <div className="project-content">
                                 <h3>{project.title}</h3>
+                                <p>{project.description}</p>
                                 <div className="project-tech">
                                     {project.tech.map((t, i) => (
                                         <span key={i} className="tech-tag">{t}</span>
                                     ))}
                                 </div>
-                                <p>{project.description}</p>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
-            </div>
+            </motion.div>
         </section>
     );
 };

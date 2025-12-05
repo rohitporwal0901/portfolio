@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const About = () => {
     const skills = [
@@ -10,7 +11,13 @@ const About = () => {
 
     return (
         <section id="about" className="about">
-            <div className="container">
+            <motion.div
+                className="container"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+            >
                 <h2>About Me</h2>
                 <div className="about-content">
                     <div className="about-text">
@@ -40,7 +47,7 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </section>
     );
 };
