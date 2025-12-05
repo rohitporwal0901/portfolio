@@ -579,6 +579,145 @@ p {
   padding: 70px 0;
 }
 
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.experience-card {
+  background: var(--surface-color);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.experience-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s ease;
+}
+
+.experience-card:hover::before {
+  transform: scaleY(1);
+}
+
+.experience-card:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 12px 30px -10px rgba(139, 92, 246, 0.4);
+}
+
+/* Experience Header */
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.25rem;
+  gap: 1rem;
+}
+
+.exp-title-section h3 {
+  font-size: 1.5rem;
+  color: #F8FAFC;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.exp-company {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.exp-company svg {
+  flex-shrink: 0;
+}
+
+.exp-type-badge {
+  padding: 6px 14px;
+  background: rgba(139, 92, 246, 0.15);
+  color: #A78BFA;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  border-radius: 20px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+/* Experience Meta */
+.exp-meta {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.exp-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: #CBD5E1;
+  font-weight: 600;
+}
+
+.exp-meta-item svg {
+  color: var(--secondary-color);
+  flex-shrink: 0;
+}
+
+/* Experience Description */
+.exp-description {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.exp-description li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  color: #CBD5E1;
+  line-height: 1.7;
+}
+
+.exp-description li svg {
+  color: var(--secondary-color);
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+/* Experience Tech Tags */
+.exp-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+/* Old Timeline Styles (keeping for backward compatibility) */
 .timeline {
   position: relative;
   max-width: 900px;
@@ -926,23 +1065,33 @@ p {
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;
-  background: var(--surface-color);
+  background: rgba(30, 41, 59, 0.9);
   border: 1px solid var(--border-color);
-  border-radius: 8px;
-  padding: 8px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 0;
   cursor: pointer;
   transition: all 0.3s ease;
-  color: var(--text-secondary);
+  color: #F8FAFC;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .modal-close:hover {
   background: var(--primary-color);
   color: white;
   border-color: var(--primary-color);
-  transform: rotate(90deg);
+  transform: rotate(90deg) scale(1.1);
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
+}
+
+.modal-close svg {
+  width: 20px;
+  height: 20px;
 }
 
 .modal-header {
@@ -1487,5 +1636,45 @@ p {
 
   .timeline-dot {
     left: -2.45rem;
+  }
+
+  /* Experience Cards Mobile */
+  .experience-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .experience-card {
+    padding: 1.5rem;
+  }
+
+  .exp-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .exp-title-section h3 {
+    font-size: 1.35rem;
+  }
+
+  .exp-company {
+    font-size: 1rem;
+  }
+
+  .exp-type-badge {
+    font-size: 0.7rem;
+    padding: 5px 12px;
+  }
+
+  .exp-meta {
+    gap: 1rem;
+  }
+
+  .exp-meta-item {
+    font-size: 0.85rem;
+  }
+
+  .exp-description li {
+    font-size: 0.95rem;
   }
 }
