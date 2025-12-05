@@ -45,14 +45,12 @@ const Projects = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                         >
-                            <div className="project-content">
-                                <h3>{project.title}</h3>
-                                <p>{project.description}</p>
-                                <div className="project-tech">
-                                    {project.tech.map((t, i) => (
-                                        <span key={i} className="tech-tag">{t}</span>
-                                    ))}
-                                </div>
+                            <h3>{project.title}</h3>
+                            <p>{project.description}</p>
+                            <div className="project-tech">
+                                {project.tech.map((t, i) => (
+                                    <span key={i} className="tech-tag">{t}</span>
+                                ))}
                             </div>
                         </motion.div>
                     ))}
