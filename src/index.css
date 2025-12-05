@@ -1101,19 +1101,30 @@ p {
 
 .modal-header {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: center;
   gap: 1rem;
   margin-bottom: 1.5rem;
+  padding-right: 60px;
+  /* Space for close button */
+  flex-wrap: wrap;
 }
 
 .modal-header h2 {
   font-size: 2rem;
   margin: 0;
+  flex-shrink: 0;
 }
 
 .modal-header h2::after {
   display: none;
+}
+
+.modal-header .project-status {
+  position: relative;
+  top: auto;
+  right: auto;
+  flex-shrink: 0;
 }
 
 .modal-description {
@@ -1584,6 +1595,9 @@ p {
   .modal-header {
     flex-direction: column;
     align-items: flex-start;
+    padding-right: 50px;
+    /* Adjust for smaller close button on mobile */
+    gap: 0.75rem;
   }
 
   .modal-header h2 {
