@@ -31,6 +31,10 @@ const Contact = () => {
                             <span className="icon">🔗</span>
                             <span>LinkedIn Profile</span>
                         </a>
+                        <a href="/Rohit_Porwal_Resume.pdf" target="_blank" rel="noopener noreferrer" className="contact-item">
+                            <span className="icon">📄</span>
+                            <span>Download Resume</span>
+                        </a>
                         <div className="contact-item">
                             <span className="icon">📍</span>
                             <span>Indore, Madhya Pradesh, India</span>
