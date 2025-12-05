@@ -63,6 +63,13 @@ const Navbar = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5 }}
                     >
+                        <a href="#education" onClick={() => setMenuOpen(false)}>Education</a>
+                    </motion.li>
+                    <motion.li
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.6 }}
+                    >
                         <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
                     </motion.li>
                 </ul>

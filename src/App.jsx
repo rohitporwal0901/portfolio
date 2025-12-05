@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
+import Education from './components/Education';
 import Contact from './components/Contact';
 import './index.css'; // Ensure styles are loaded
 
@@ -15,6 +16,7 @@ function App() {
       <About />
       <Experience />
       <Projects />
+      <Education />
       <Contact />
     </div>
   );
