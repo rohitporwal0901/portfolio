@@ -1,36 +1,76 @@
 :root {
+  /* ========== Colors ========== */
   --bg-color: #0B1120;
-  /* Deepest Navy/Black */
   --surface-color: rgba(30, 41, 59, 0.6);
-  /* Glassy Slate */
   --surface-hover: rgba(51, 65, 85, 0.8);
 
-  /* Vibrant Gradient Brand Colors */
+  /* Brand Colors */
   --primary-color: #8B5CF6;
-  /* Violet */
   --secondary-color: #06B6D4;
-  /* Cyan */
   --accent-color: #EC4899;
-  /* Pink */
-
   --primary-tint: rgba(139, 92, 246, 0.1);
 
+  /* Text Colors */
   --text-color: #F8FAFC;
-  /* Slate 50 */
   --text-secondary: #94A3B8;
-  /* Slate 400 */
+  --text-muted: #CBD5E1;
 
+  /* Border & Divider */
   --border-color: rgba(148, 163, 184, 0.1);
+  --border-color-strong: rgba(148, 163, 184, 0.2);
 
+  /* ========== Typography ========== */
   --font-main: 'Outfit', sans-serif;
   --font-mono: 'Space Mono', monospace;
 
+  /* Font Sizes */
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.25rem;
+  --fs-2xl: 1.5rem;
+  --fs-3xl: 2rem;
+
+  /* Line Heights */
+  --lh-tight: 1.3;
+  --lh-normal: 1.5;
+  --lh-relaxed: 1.7;
+  --lh-loose: 1.8;
+
+  /* ========== Spacing ========== */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 0.75rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+
+  /* ========== Layout ========== */
   --nav-height: 70px;
-  /* Slightly more compact */
   --border-radius: 8px;
-  /* Sharper, cleaner look */
+  --border-radius-sm: 6px;
+  --border-radius-lg: 12px;
+  --border-radius-xl: 16px;
+  --border-radius-2xl: 20px;
+  --border-radius-full: 50%;
+
+  --max-width: 1280px;
+  --container-padding: 40px;
+
+  /* ========== Transitions ========== */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ========== Shadows ========== */
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 10px 20px -10px rgba(139, 92, 246, 0.3);
+  --shadow-lg: 0 20px 40px -15px rgba(139, 92, 246, 0.4);
+  --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
 
+/* ========== Reset & Base Styles ========== */
 * {
   margin: 0;
   padding: 0;
@@ -40,15 +80,13 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
-  /* Explicit base size */
 }
 
 body {
   font-family: var(--font-main);
   background-color: var(--bg-color);
   color: var(--text-color);
-  line-height: 1.7;
-  /* Improved readability */
+  line-height: var(--lh-relaxed);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   background-image:
@@ -60,7 +98,7 @@ body {
 a {
   text-decoration: none;
   color: inherit;
-  transition: all 0.3s ease;
+  transition: var(--transition-base);
 }
 
 ul {
@@ -73,7 +111,7 @@ button {
   font-family: inherit;
 }
 
-/* Scrollbar */
+/* ========== Scrollbar ========== */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -91,10 +129,11 @@ button {
   background: var(--primary-color);
 }
 
+/* ========== Layout Utilities ========== */
 .container {
-  max-width: 1280px;
+  max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 var(--container-padding);
   width: 100%;
 }
 
@@ -104,14 +143,15 @@ section {
   margin: 0 auto;
 }
 
+/* ========== Typography ========== */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  line-height: 1.3;
-  margin-bottom: 1.25rem;
+  line-height: var(--lh-tight);
+  margin-bottom: var(--spacing-lg);
   color: var(--text-color);
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -122,7 +162,7 @@ h2 {
   margin-bottom: 3.5rem;
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  gap: var(--spacing-lg);
   position: relative;
 }
 
@@ -138,24 +178,24 @@ h2::after {
 
 p {
   color: var(--text-secondary);
-  margin-bottom: 1.5rem;
-  font-size: 1.125rem;
-  line-height: 1.8;
+  margin-bottom: var(--spacing-lg);
+  font-size: var(--fs-lg);
+  line-height: var(--lh-loose);
 }
 
-/* Buttons */
+/* ========== Buttons ========== */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem 2rem;
+  padding: var(--spacing-md) var(--spacing-xl);
   background: transparent;
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
   border-radius: var(--border-radius);
   font-family: var(--font-mono);
   font-size: 0.95rem;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-smooth);
   text-decoration: none;
   line-height: 1;
   position: relative;
@@ -176,14 +216,14 @@ p {
   width: 0%;
   height: 100%;
   background: var(--primary-color);
-  transition: width 0.3s ease;
+  transition: width var(--transition-base);
   z-index: -1;
 }
 
 .btn:hover {
   color: white;
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px -10px rgba(139, 92, 246, 0.5);
+  box-shadow: var(--shadow-md);
 }
 
 .btn:hover::before {
@@ -207,7 +247,9 @@ p {
   display: none;
 }
 
-/* Navbar */
+/* ========================================
+   NAVIGATION
+   ======================================== */
 .navbar {
   position: fixed;
   top: 0;
@@ -308,7 +350,9 @@ p {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-/* Hero */
+/* ========================================
+   HERO SECTION
+   ======================================== */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -357,7 +401,9 @@ p {
   gap: 20px;
 }
 
-/* About */
+/* ========================================
+   ABOUT SECTION
+   ======================================== */
 .about {
   padding: 70px 0;
 }
@@ -388,7 +434,9 @@ p {
   margin-bottom: 1.5rem;
 }
 
-/* New Skills Section */
+/* ========================================
+   SKILLS SECTION
+   ======================================== */
 .skills-section-new {
   width: 100%;
 }
@@ -579,7 +627,9 @@ p {
   color: var(--primary-color);
 }
 
-/* Experience */
+/* ========================================
+   EXPERIENCE SECTION
+   ======================================== */
 .experience {
   padding: 70px 0;
 }
@@ -793,7 +843,9 @@ p {
   font-size: 1.2rem;
 }
 
-/* Projects */
+/* ========================================
+   PROJECTS SECTION
+   ======================================== */
 .projects {
   padding: 70px 0;
 }
@@ -1359,7 +1411,9 @@ p {
 }
 
 
-/* Contact */
+/* ========================================
+   CONTACT SECTION
+   ======================================== */
 .contact {
   padding: 70px 0;
 }
@@ -1420,8 +1474,14 @@ p {
   border-top: 1px solid var(--border-color);
 }
 
-/* Responsive */
+/* ========================================
+   RESPONSIVE / MOBILE STYLES
+   ======================================== */
 @media (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+
   .container {
     padding: 0 24px;
   }
@@ -1431,12 +1491,18 @@ p {
   }
 
   h2 {
-    font-size: 1.75rem;
+    font-size: 1.85rem;
     margin-bottom: 2.5rem;
   }
 
   h2::after {
     max-width: 150px;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.75;
+    margin-bottom: 1.25rem;
   }
 
   .menu-toggle {
@@ -1468,7 +1534,8 @@ p {
   }
 
   .nav-links a {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    padding: 8px 0;
   }
 
   .about-content {
@@ -1486,7 +1553,8 @@ p {
 
   /* Skills Section Mobile */
   .skills-section-new h3 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    margin-bottom: 1.75rem;
   }
 
   .skills-filter {
@@ -1495,8 +1563,9 @@ p {
   }
 
   .filter-btn {
-    font-size: 0.8rem;
-    padding: 8px 16px;
+    font-size: 0.85rem;
+    padding: 9px 18px;
+    min-height: 42px;
   }
 
   .skills-grid-new {
@@ -1515,7 +1584,8 @@ p {
   }
 
   .skill-name {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 600;
   }
 
   .hero-btns {
@@ -1526,23 +1596,41 @@ p {
 
   .btn {
     width: 100%;
+    padding: 1rem 2rem;
+    font-size: 0.95rem;
+    min-height: 48px;
   }
 
-  h2 {
-    font-size: 2rem;
+  .greeting {
+    font-size: 1rem;
+    margin-bottom: 1rem;
   }
 
   .name {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
   }
 
   .title {
-    font-size: 2rem;
+    font-size: 1.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .description {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
   }
 
   .projects-grid {
     grid-template-columns: 1fr;
     gap: 20px;
+  }
+
+  /* Project Filters Mobile */
+  .project-filters {
+    gap: 8px;
+    margin-bottom: 2.5rem;
   }
 
   /* Project Card Mobile */
@@ -1552,38 +1640,59 @@ p {
   }
 
   .project-card-new h3 {
-    font-size: 1.35rem;
+    font-size: 1.4rem;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
   }
 
   .project-short-desc {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin-bottom: 0.75rem;
+  }
+
+  .project-status {
+    font-size: 0.75rem;
+    padding: 6px 14px;
   }
 
   .project-highlights {
-    padding: 0.75rem;
+    padding: 0.85rem;
+    gap: 10px;
   }
 
   .highlight-item {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
+    gap: 10px;
   }
 
   .project-tech {
     gap: 6px;
+    margin-top: 0.75rem;
   }
 
   .tech-tag {
-    font-size: 0.65rem;
-    padding: 4px 8px;
+    font-size: 0.7rem;
+    padding: 5px 10px;
   }
 
   .project-actions {
     flex-direction: column;
     gap: 10px;
+    margin-top: 0.75rem;
   }
 
-  .btn-view-details,
+  .btn-view-details {
+    width: 100%;
+    padding: 12px 18px;
+    font-size: 0.9rem;
+    min-height: 46px;
+  }
+
   .btn-live-link {
     width: 100%;
+    padding: 12px;
+    min-height: 46px;
   }
 
   /* Modal Mobile */
@@ -1592,28 +1701,57 @@ p {
     max-height: 95vh;
   }
 
+  .modal-close {
+    width: 42px;
+    height: 42px;
+    top: 1.25rem;
+    right: 1.25rem;
+  }
+
+  .modal-close svg {
+    width: 20px;
+    height: 20px;
+  }
+
   .modal-header {
     flex-direction: column;
     align-items: flex-start;
     padding-right: 50px;
-    /* Adjust for smaller close button on mobile */
     gap: 0.75rem;
+    margin-bottom: 1.25rem;
   }
 
   .modal-header h2 {
     font-size: 1.5rem;
+    line-height: 1.3;
   }
 
   .modal-description {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .modal-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .modal-section p,
+  .modal-section li {
+    font-size: 0.95rem;
+    line-height: 1.7;
   }
 
   .modal-actions {
     flex-direction: column;
+    gap: 10px;
   }
 
   .modal-actions .btn {
     width: 100%;
+    padding: 12px 18px;
+    font-size: 0.9rem;
+    min-height: 46px;
   }
 
   /* Education Mobile */
@@ -1670,10 +1808,12 @@ p {
   .exp-header {
     flex-direction: column;
     align-items: flex-start;
+    gap: 0.5rem;
   }
 
   .exp-title-section h3 {
     font-size: 1.35rem;
+    line-height: 1.3;
   }
 
   .exp-company {
@@ -1681,12 +1821,14 @@ p {
   }
 
   .exp-type-badge {
-    font-size: 0.7rem;
-    padding: 5px 12px;
+    font-size: 0.72rem;
+    padding: 6px 12px;
+    min-height: 30px;
   }
 
   .exp-meta {
     gap: 1rem;
+    margin-bottom: 1rem;
   }
 
   .exp-meta-item {
@@ -1695,5 +1837,44 @@ p {
 
   .exp-description li {
     font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 12px;
+  }
+
+  .exp-tech .tech-tag {
+    font-size: 0.7rem;
+    padding: 5px 10px;
+  }
+
+  /* Contact Section Mobile */
+  .contact-grid {
+    gap: 14px;
+  }
+
+  .contact-item {
+    font-size: 0.95rem;
+    padding: 0.9rem 1.1rem;
+    min-height: 48px;
+  }
+
+  .contact-item svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* About Section Mobile */
+  .about-text p {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  /* Contact Content Mobile */
+  .contact-content {
+    padding: 2.25rem 1.5rem;
+  }
+
+  .contact-content p {
+    font-size: 1rem;
+    line-height: 1.7;
   }
 }
