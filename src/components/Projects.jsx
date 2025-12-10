@@ -232,6 +232,19 @@ const Projects = () => {
         ? projects
         : projects.filter(p => p.status === activeFilter);
 
+    const getInitials = (name) => {
+        if (!name) return '';
+        const words = name.split(' ');
+        if (words.length === 1) {
+            return name.substring(0, 2).toUpperCase();
+        }
+        return words
+            .map(word => word[0])
+            .join('')
+            .substring(0, 2)
+            .toUpperCase();
+    };
+
     return (
         <section id="projects" className="projects">
             <motion.div
@@ -285,7 +298,18 @@ const Projects = () => {
                             </div>
 
                             <div className="project-content">
-                                <h3>{project.title}</h3>
+                                <div className="project-title-wrapper">
+                                    <div className="project-logo-wrapper">
+                                        {project.image ? (
+                                            <img src={project.image} alt={project.title} className="project-logo" />
+                                        ) : (
+                                            <div className="project-logo-placeholder">
+                                                {getInitials(project.title)}
+                                            </div>
+                                        )}
+                                    </div>
+                                    <h3>{project.title}</h3>
+                                </div>
                                 <p className="project-short-desc">{project.description}</p>
 
                                 {/* Highlights */}
