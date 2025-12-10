@@ -1,11 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import quadralystLogo from '../assets/experience/quadralyst.svg';
+import steppingStoneLogo from '../assets/experience/stepping-stone.png';
 
 const Experience = () => {
     const experiences = [
         {
             role: "Junior Developer",
             company: "Quadralyst Pvt. Ltd.",
+            logo: quadralystLogo,
             duration: "April 2023 – Present",
             location: "Indore, India",
             type: "Full-time",
@@ -20,6 +23,7 @@ const Experience = () => {
         {
             role: "Angular Developer Intern",
             company: "The Stepping Stone (Training Institute)",
+            logo: steppingStoneLogo,
             duration: "Aug 2022 – Feb 2023",
             location: "Indore, India",
             type: "Internship",
@@ -59,10 +63,9 @@ const Experience = () => {
                                 <div className="exp-title-section">
                                     <h3>{exp.role}</h3>
                                     <div className="exp-company">
-                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                                        </svg>
+                                        <div className="company-logo">
+                                            <img src={exp.logo} alt={exp.company} />
+                                        </div>
                                         <span>{exp.company}</span>
                                     </div>
                                 </div>

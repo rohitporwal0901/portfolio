@@ -1,6 +1,14 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+// Import project images
+import partyTambolaImg from '../assets/projects/partytambola.webp';
+import bhautikiPlusImg from '../assets/projects/bhautiki-plus.png';
+import activeAvenueImg from '../assets/projects/active-avenue.png';
+import goWowImg from '../assets/projects/gowow.webp';
+import mangosteenImg from '../assets/projects/mangosteen.jpeg';
+import lyvvibImg from '../assets/projects/lyvvib.png';
+
 const Projects = () => {
     const [selectedProject, setSelectedProject] = useState(null);
     const [activeFilter, setActiveFilter] = useState('all');
@@ -28,7 +36,8 @@ const Projects = () => {
                 "Supports up to 1,000 players in one game",
                 "Ideal for group engagement & events",
                 "Monetization options for organizers"
-            ]
+            ],
+            image: partyTambolaImg
         },
         // {
         //     id: "2",
@@ -76,7 +85,8 @@ const Projects = () => {
                 "Flexible fee refund option based on attendance",
                 "Dedicated mentor for every student",
                 "Multiple success stories with high NEET/IIT-JEE scores"
-            ]
+            ],
+            image: bhautikiPlusImg
         },
         {
             id: "4",
@@ -144,7 +154,8 @@ const Projects = () => {
                 "1000+ students enrolled",
                 "3D physics simulations",
                 "Gamified learning"
-            ]
+            ],
+            image: activeAvenueImg
         },
         {
             id: "7",
@@ -167,7 +178,8 @@ const Projects = () => {
                 "Aggregate verified NGOs, volunteers, and donors",
                 "Earn rewards (points/coins) for social contributions",
                 "Strong community involvement and impact tracking"
-            ]
+            ],
+            image: goWowImg
         },
         {
             id: "8",
@@ -189,7 +201,8 @@ const Projects = () => {
                 "Rated ~4.5+ with many positive reviews",
                 "Ideal for casual gatherings or relaxed meals",
                 "Standout menu items like Peri Peri Fries, Aglio Olio Pasta"
-            ]
+            ],
+            image: mangosteenImg
         },
         {
             id: "9",
@@ -263,6 +276,8 @@ const Projects = () => {
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             whileHover={{ y: -8 }}
                         >
+
+
                             {/* Status Badge */}
                             <div className={`project-status ${project.status}`}>
                                 <span className="status-dot"></span>
