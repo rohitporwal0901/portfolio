@@ -14,8 +14,8 @@ const Contact = () => {
                 <h2>Get In Touch</h2>
                 <div className="contact-content">
                     <p>
-                        I'm currently looking for new opportunities. Whether you have a question or just want to say hi,
-                        feel free to reach out!
+                        I'm always open to discussing new projects, creative ideas, or opportunities to contribute.
+                        Feel free to reach out if you have a question or just want to connect!
                     </p>
 
                     <div className="contact-links">

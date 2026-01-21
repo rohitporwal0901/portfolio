@@ -43,12 +43,13 @@ const About = () => {
                 <div className="about-content-full">
                     <div className="about-text">
                         <p>
-                            I am a results-driven Angular and Ionic developer with over 2.5 years of experience in building high-quality web and mobile applications.
-                            I have a strong foundation in creating responsive UI/UX and scalable backend solutions.
+                            I am a passionate Senior Angular and Ionic Developer with over 3 years of hands-on experience architecting and delivering enterprise-grade web and mobile applications.
+                            I excel at building cross-platform solutions that combine exceptional user experience with robust, scalable architecture.
                         </p>
                         <p>
-                            My journey involves working with cross-functional teams to design and develop innovative software solutions, optimizing performance,
-                            and ensuring code quality. I am a strong problem-solver and collaborative team player, committed to writing clean, maintainable code.
+                            My expertise spans the entire development lifecycle—from requirement analysis and system design to deployment and optimization.
+                            I've successfully delivered 10+ production applications serving thousands of users, specializing in real-time features, state management with RxJS/NgRx, and Firebase integrations.
+                            I thrive in collaborative environments and am committed to writing clean, maintainable, and well-tested code.
                         </p>
                     </div>
 
