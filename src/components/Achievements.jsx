@@ -186,7 +186,7 @@ const Achievements = () => {
                 </motion.div>
 
                 {/* Technology Impact */}
-                <motion.div
+                {/* <motion.div
                     className="tech-impact-section"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -225,7 +225,7 @@ const Achievements = () => {
                             </motion.div>
                         ))}
                     </div>
-                </motion.div>
+                </motion.div> */}
             </motion.div>
         </section>
     );

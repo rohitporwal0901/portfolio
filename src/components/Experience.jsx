@@ -6,7 +6,7 @@ import steppingStoneLogo from '../assets/experience/stepping-stone.png';
 const Experience = () => {
     const experiences = [
         {
-            role: "Senior Angular & Ionic Developer",
+            role: "Software Developer",
             company: "Quadralyst Pvt. Ltd.",
             logo: quadralystLogo,
             duration: "April 2023 – Present (3+ Years)",
@@ -22,7 +22,7 @@ const Experience = () => {
             technologies: ["Angular", "Ionic", "TypeScript", "Firebase", "RxJS", "NgRx", "Capacitor"]
         },
         {
-            role: "Angular Developer Intern",
+            role: "Software Developer Intern",
             company: "The Stepping Stone (Training Institute)",
             logo: steppingStoneLogo,
             duration: "Aug 2022 – Feb 2023 (6 Months)",

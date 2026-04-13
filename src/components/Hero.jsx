@@ -42,7 +42,7 @@ const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.3 }}
                 >
-                    Senior Angular & Ionic Developer.
+                    Sofware Developer.
                 </motion.h2>
 
                 <motion.p

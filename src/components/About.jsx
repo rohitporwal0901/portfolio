@@ -43,7 +43,7 @@ const About = () => {
                 <div className="about-content-full">
                     <div className="about-text">
                         <p>
-                            I am a passionate Senior Angular and Ionic Developer with over 3 years of hands-on experience architecting and delivering enterprise-grade web and mobile applications.
+                            I am a passionate Sofware Developer with over 3 years of hands-on experience architecting and delivering enterprise-grade web and mobile applications.
                             I excel at building cross-platform solutions that combine exceptional user experience with robust, scalable architecture.
                         </p>
                         <p>
