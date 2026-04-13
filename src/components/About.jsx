@@ -14,8 +14,8 @@ const About = () => {
         { name: "SCSS", category: "Frontend", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" },
         { name: "Bootstrap", category: "Frontend", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" },
         { name: "Material UI", category: "Frontend", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg" },
-        { name: "Node.js", category: "Backend", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
-        { name: "Express", category: "Backend", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
+        { name: "Node.js", category: "Backend", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", badge: "Familiar" },
+        { name: "Express", category: "Backend", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg", badge: "Familiar" },
         { name: "MongoDB", category: "Database", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
         { name: "Firebase", category: "Database", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" },
         { name: "Git", category: "Tools", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
@@ -49,7 +49,7 @@ const About = () => {
                         <p>
                             My expertise spans the entire development lifecycle—from requirement analysis and system design to deployment and optimization.
                             I've successfully delivered 10+ production applications serving thousands of users, specializing in real-time features, state management with RxJS/NgRx, and Firebase integrations.
-                            I thrive in collaborative environments and am committed to writing clean, maintainable, and well-tested code.
+                            Beyond my core frontend expertise, I possess a strong conceptual foundation in backend technologies like Node.js and Express, allowing me to bridge the gap between client and server architectures effectively.
                         </p>
                     </div>
 
@@ -84,6 +84,11 @@ const About = () => {
                                     transition={{ duration: 0.3, delay: index * 0.05 }}
                                     whileHover={{ y: -8, scale: 1.05 }}
                                 >
+                                    {skill.badge && (
+                                        <div className="skill-badge">
+                                            {skill.badge}
+                                        </div>
+                                    )}
                                     <div className="skill-icon-wrapper">
                                         <img src={skill.icon} alt={skill.name} className="skill-icon" />
                                     </div>

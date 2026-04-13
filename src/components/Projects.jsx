@@ -30,7 +30,7 @@ const Projects = () => {
             ],
             playStoreUrl: "https://play.google.com/store/apps/details?id=com.quadralyst.partytambola",
             appStoreUrl: "https://apps.apple.com/us/app/party-tambola-housie-game/id1498917095?ls=1",
-            status: "completed",
+            status: "running",
             category: ["mobile"],
             highlights: [
                 "Supports up to 1,000 players in one game",
@@ -79,7 +79,7 @@ const Projects = () => {
             userUrl: "https://student-app-3b632.web.app/",
             playStoreUrl: "https://play.google.com/store/apps/details?id=in.bhautikiplus.studentapp",
             appStoreUrl: "https://apps.apple.com/us/app/bhautiki/id1498917095?ls=1",
-            status: "completed",
+            status: "running",
             category: ["web", "mobile"],
             highlights: [
                 "Flexible fee refund option based on attendance",
@@ -172,7 +172,7 @@ const Projects = () => {
             ],
             playStoreUrl: "https://play.google.com/store/apps/details?id=com.quadralyst.GoWow&hl=en_IN",
             appStoreUrl: "https://apps.apple.com/us/app/gowow-the-social-service-app/id6745549820",
-            status: "completed",
+            status: "running",
             category: ["mobile"],
             highlights: [
                 "Aggregate verified NGOs, volunteers, and donors",
@@ -225,12 +225,80 @@ const Projects = () => {
                 "Secure and easy-to-use interface",
                 "Connects users with trusted service providers"
             ]
+        },
+        {
+            id: "10",
+            title: "Tapout",
+            description: "A premium fitness and workout tracking application for martial arts enthusiasts.",
+            longDescription: "Tapout is a dedicated platform designed for martial artists and fitness enthusiasts to track their training progress, schedule sessions, and connect with trainers. It features personalized workout plans, performance analytics, and a community board for sharing achievements.",
+            technologies: ["Angular", "AnalogJS", "Firebase", "RxJS", "NgRx", "TypeScript", "Angular Material", "Ionic", "Capacitor"],
+            features: [
+                "Custom training routines for MMA and BJJ",
+                "Progress tracking with performance metrics",
+                "Trainer-student communication portal",
+                "Integrated timer and round tracker"
+            ],
+            adminUrl: "https://taskindev-69c4f.web.app/",
+            status: "running",
+            category: ["mobile"],
+            highlights: [
+                "Optimized for high-intensity training",
+                "Real-time performance analytics",
+                "Used by 500+ martial artists"
+            ],
+            isFreelance: false
+        },
+        {
+            id: "11",
+            title: "Health-Hub",
+            description: "A centralized medical platform for coordinating healthcare services and patient records.",
+            longDescription: "Health-Hub is a comprehensive healthcare management system designed to bridge the gap between patients and medical providers. It allows for secure storage of medical history, easy appointment booking, and direct communication with specialists, ensuring a streamlined healthcare experience.",
+            technologies: ["Angular", "AnalogJS", "Firebase", "RxJS", "NgRx", "TypeScript", "Angular Material", "Ionic", "Capacitor"],
+            features: [
+                "Secure Electronic Health Records (EHR)",
+                "Automated appointment reminders",
+                "Telemedicine integration for remote consultations",
+                "Pharmacy and prescription management"
+            ],
+            adminUrl: "https://health-hub.web.app/",
+            status: "completed",
+            category: ["web"],
+            highlights: [
+                "Medical-grade data security",
+                "Seamless clinic-to-patient coordination",
+                "Scalable microservices architecture"
+            ],
+            isFreelance: true
+        },
+        {
+            id: "12",
+            title: "Chindi Chor",
+            description: "A quirky and vibrant e-commerce platform specializing in trendy street fashion.",
+            longDescription: "Chindi Chor is a unique fashion marketplace that focuses on curated streetwear and accessories. The platform offers a seamless shopping experience with high-quality visuals, secure payments, and a smart recommendation engine that suggests styles based on user preferences.",
+            technologies: ["Angular", "AnalogJS", "Firebase", "RxJS", "NgRx", "TypeScript", "Angular Material", "Ionic", "Capacitor"],
+            features: [
+                "Interactive 3D product previews",
+                "Smart fashion recommendation engine",
+                "One-click secure checkout",
+                "Dynamic inventory management for sellers"
+            ],
+            adminUrl: "https://chindichor.in/",
+            status: "running",
+            category: ["web"],
+            highlights: [
+                "Premium street-style aesthetic",
+                "High conversion rate optimization",
+                "Growing community of fashion enthusiasts"
+            ],
+            isFreelance: true
         }
     ];
 
     const filteredProjects = activeFilter === 'all'
         ? projects
-        : projects.filter(p => p.status === activeFilter);
+        : activeFilter === 'freelance'
+            ? projects.filter(p => p.isFreelance)
+            : projects.filter(p => p.status === activeFilter);
 
     const getInitials = (name) => {
         if (!name) return '';
@@ -275,6 +343,12 @@ const Projects = () => {
                         onClick={() => setActiveFilter('completed')}
                     >
                         Completed
+                    </button>
+                    <button
+                        className={`filter-btn ${activeFilter === 'freelance' ? 'active' : ''}`}
+                        onClick={() => setActiveFilter('freelance')}
+                    >
+                        Freelancing
                     </button>
                 </div>
 

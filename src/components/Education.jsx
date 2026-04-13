@@ -10,20 +10,20 @@ const Education = () => {
             year: "2019-2022",
             icon: "🎓"
         },
-        {
-            degree: "HSC",
-            institution: "Saraswati shishu Vidhya Mandir",
-            score: "68%",
-            year: "2016-2017",
-            icon: "📚"
-        },
-        {
-            degree: "SSC",
-            institution: "Saraswati shishu Vidhya Mandir",
-            score: "78%",
-            year: "2014-2015",
-            icon: "📖"
-        }
+        // {
+        //     degree: "HSC",
+        //     institution: "Saraswati shishu Vidhya Mandir",
+        //     score: "68%",
+        //     year: "2016-2017",
+        //     icon: "📚"
+        // },
+        // {
+        //     degree: "SSC",
+        //     institution: "Saraswati shishu Vidhya Mandir",
+        //     score: "78%",
+        //     year: "2014-2015",
+        //     icon: "📖"
+        // }
     ];
 
     return (
