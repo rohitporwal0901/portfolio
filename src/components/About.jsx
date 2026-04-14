@@ -6,7 +6,7 @@ const About = () => {
 
     const skillsData = [
         { name: "Angular", category: "Frontend", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" },
-        { name: "Ionic", category: "Frontend", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ionic/ionic-original.svg" },
+        { name: "Ionic", category: "Mobile", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ionic/ionic-original.svg" },
         { name: "TypeScript", category: "Frontend", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
         { name: "JavaScript", category: "Frontend", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
         { name: "HTML5", category: "Frontend", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
@@ -22,9 +22,12 @@ const About = () => {
         { name: "GitHub", category: "Tools", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
         { name: "VS Code", category: "Tools", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
         { name: "Postman", category: "Tools", icon: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" },
+        { name: "Capacitor", category: "Mobile", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/capacitor/capacitor-original.svg" },
+        { name: "Analog JS", category: "Frontend", icon: "https://analogjs.org/img/logos/analog-logo.svg" },
+        { name: "Android Studio", category: "Tools", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg" },
     ];
 
-    const categories = ['All', 'Frontend', 'Backend', 'Database', 'Tools'];
+    const categories = ['All', 'Frontend', 'Backend', 'Mobile', 'Database', 'Tools'];
 
     const filteredSkills = activeFilter === 'All'
         ? skillsData

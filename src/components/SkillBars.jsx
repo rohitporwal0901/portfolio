@@ -15,6 +15,8 @@ const SkillBars = () => {
         { name: 'Capacitor', level: 87, color: '#119EFF', category: 'Mobile' },
         { name: 'Git', level: 90, color: '#F05032', category: 'Tools' },
         { name: 'REST APIs', level: 92, color: '#61DAFB', category: 'Integration' },
+        { name: 'Analog JS', level: 85, color: '#E03131', category: 'Frontend' },
+        { name: 'Android Studio', level: 80, color: '#3DDC84', category: 'Tools' },
     ];
 
     return (
