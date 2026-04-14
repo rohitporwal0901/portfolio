@@ -31,7 +31,7 @@ const Contact = () => {
                             <span className="icon">🔗</span>
                             <span>LinkedIn Profile</span>
                         </a>
-                        <a href="/Rohit_Porwal_Resume.pdf" target="_blank" rel="noopener noreferrer" className="contact-item">
+                        <a href="/Rohit_resume.pdf" target="_blank" rel="noopener noreferrer" className="contact-item">
                             <span className="icon">📄</span>
                             <span>Download Resume</span>
                         </a>
