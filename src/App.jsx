@@ -8,6 +8,7 @@ import Projects from './components/Projects';
 import Achievements from './components/Achievements';
 import Education from './components/Education';
 import Contact from './components/Contact';
+import ScrollCard from './components/ScrollCard';
 import './index.css'; // Ensure styles are loaded
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <Achievements />
       <Education />
       <Contact />
+      <ScrollCard />
     </div>
   );
 }
