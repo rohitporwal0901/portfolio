@@ -56,13 +56,13 @@ const Navbar = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4 }}
                     >
-                        <a href="#skill-bars" onClick={() => setMenuOpen(false)}>Skills</a>
+                        {/* <a href="#skill-bars" onClick={() => setMenuOpen(false)}>Skills</a>
                     </motion.li>
                     <motion.li
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5 }}
-                    >
+                    > */}
                         <a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a>
                     </motion.li>
                     <motion.li
